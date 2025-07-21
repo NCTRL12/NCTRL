@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NCTRL</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    nav {
+      background-color: #ff4500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    nav h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: white;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+
+    nav ul li a:hover {
+      color: #ffd5b4;
+    }
+
+    section {
+      display: none;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    #producto {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .product {
+      max-width: 300px;
+      border-radius: 8px;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .product h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      color: #ff4500;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .gmail-btn {
+      display: inline-block;
+      background-color: #ff4500;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .gmail-btn:hover {
+      background-color: #e03e00;
+    }
+
+    .menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .menu-links a {
+      background: #1a1a1a;
+      color: white;
+      padding: 1rem;
+      border: 2px solid #ff4500;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .menu-links a:hover {
+      background-color: #ff4500;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #888;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>NCTRL</h1>
+    <ul>
+      <li><a onclick="showSection('inicio')">Inicio</a></li>
+      <li><a onclick="showSection('producto')">Producto</a></li>
+      <li><a onclick="showSection('conocenos')">Conócenos</a></li>
+      <li><a onclick="showSection('contacto')">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- INICIO -->
+  <section id="inicio" class="active">
+    <h2>Bienvenido a NCTRL</h2>
+    <p>Ropa urbana con actitud callejera y esencia propia.</p>
+    <div class="menu-links">
+      <a onclick="showSection('producto')">Ver Producto</a>
+      <a onclick="showSection('conocenos')">Conócenos</a>
+      <a onclick="showSection('contacto')">Contacto</a>
+    </div>
+  </section>
+
+  <!-- PRODUCTO -->
+  <section id="producto">
+    <div class="product">
+      <img src="chili-shirt.png" alt="Camiseta CHILI" />
+      <h2>Camiseta CHILI</h2>
+      <p class="price">25 €</p>
+      <a
+        class="gmail-btn"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=nctrlshoponline@gmail.com&su=Compra%20Camiseta%20CHILI%20NCTRL&body=Hola%2C%20quiero%20comprar%20la%20camiseta%20CHILI%20de%20NCTRL."
+        target="_blank"
+      >Comprar por Gmail</a>
+    </div>
+
+    <div class="product">
+      <img src="fox-cap.png" alt="Gorra Focapx" />
+      <h2>Gorra Focapx</h2>
+      <p class="price">20 €</p>
+      <a
+        class="gmail-btn"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=nctrlshoponline@gmail.com&su=Compra%20Gorra%20Focapx%20NCTRL&body=Hola%2C%20quiero%20comprar%20la%20Gorra%20Focapx%20de%20NCTRL."
+        target="_blank"
+      >Comprar por Gmail</a>
+    </div>
+  </section>
+
+  <!-- CONÓCENOS -->
+  <section id="conocenos">
+    <h2>Conócenos</h2>
+    <p>
+      NCTRL nace del arte urbano, la calle y la rebeldía. Creamos ropa con
+      personalidad, mezclando grafiti, cultura y actitud. Hecho para quienes no
+      siguen las normas, sino que las rompen.
+    </p>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>
+      📧 Correo: 
+      <a 
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=nctrlshoponline@gmail.com"
+        target="_blank"
+        style="color:#ff4500"
+      >
+        nctrlshoponline@gmail.com
+      </a>
+    </p>
+    <p>Escríbenos si quieres comprar, colaborar o preguntar cualquier cosa.</p>
+  </section>
+
+  <footer>© 2025 NCTRL · Todos los derechos reservados</footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+</body>
+</html>
